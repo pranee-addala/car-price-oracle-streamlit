@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { Car } from "lucide-react";
 
 interface CarImageProps {
   brand: string;
