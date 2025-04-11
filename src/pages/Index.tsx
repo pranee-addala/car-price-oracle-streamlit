@@ -11,7 +11,7 @@ const Index = () => {
       <main className="flex-1 container py-8">
         <div className="mb-8 text-center">
           <h2 className="text-2xl font-bold text-car-accent mb-2 glow-text">Car Price Prediction</h2>
-          <p className="text-car-muted max-w-2xl mx-auto">
+          <p className="text-gray-300 max-w-2xl mx-auto">
             Our advanced machine learning model analyzes your car's details to predict its market value.
             Fill in the information below to get an estimate.
           </p>

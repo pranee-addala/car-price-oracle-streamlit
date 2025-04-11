@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="mb-4 md:mb-0">
-            <p className="text-car-muted text-sm">
+            <p className="text-gray-400 text-sm">
               &copy; {new Date().getFullYear()} Car Price Oracle
             </p>
           </div>
@@ -17,13 +17,13 @@ const Footer = () => {
               href="https://github.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-car-muted hover:text-car-accent transition-colors glow-icon-sm"
+              className="text-gray-400 hover:text-car-accent transition-colors glow-icon-sm"
             >
               <Github size={20} />
             </a>
             <div className="flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-car-accent/80 glow-icon-sm" />
-              <p className="text-car-muted text-sm">
+              <p className="text-gray-400 text-sm">
                 Built with ML & React
               </p>
             </div>

@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -64,11 +63,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				car: {
-					primary: '#0F172A',
-					secondary: '#1E293B',
-					accent: '#8B5CF6', // Changed from #0EA5E9 (blue) to #8B5CF6 (violet)
-					light: '#EDE9FE', // Changed from #E0F2FE (light blue) to #EDE9FE (light violet)
-					muted: '#94A3B8'
+					primary: '#0D0D16',
+					secondary: '#1A1A29',
+					accent: '#8B5CF6',
+					light: '#EDE9FE',
+					muted: '#9CA3AF'
 				}
 			},
 			borderRadius: {

@@ -14,7 +14,7 @@ const Header = ({ className }: HeaderProps) => {
           <GaugeCircle className="w-8 h-8 text-car-accent glow-icon" />
           <Sparkles className="w-4 h-4 text-car-accent/80 absolute -top-1 -right-1 animate-pulse" />
         </div>
-        <h1 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-car-light via-car-accent to-car-light glow-text">Car Price Oracle</h1>
+        <h1 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-car-accent/70 via-car-accent to-car-accent/70 glow-text">Car Price Oracle</h1>
       </div>
     </header>
   );
