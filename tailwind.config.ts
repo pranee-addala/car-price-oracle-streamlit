@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,10 +64,10 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				car: {
-					primary: '#0D0D16',
-					secondary: '#1A1A29',
-					accent: '#8B5CF6',
-					light: '#EDE9FE',
+					primary: '#05050a', /* Darker shade */
+					secondary: '#12121f', /* Darker shade */
+					accent: '#6D28DB', /* Darker violet */
+					light: '#E9DEFF', /* Adjusted for darker violet */
 					muted: '#9CA3AF'
 				}
 			},

@@ -14,16 +14,16 @@
     --popover: 222 47% 11%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 260 84% 51%; /* Violet */
+    --primary: 260 84% 41%; /* Darker Violet */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 260 32% 25%; /* Darker violet */
+    --secondary: 260 32% 15%; /* Much Darker violet */
     --secondary-foreground: 210 40% 98%;
 
     --muted: 223 47% 11%;
     --muted-foreground: 215.4 16.3% 56.9%;
 
-    --accent: 260 89% 66%; /* Brighter violet */
+    --accent: 260 89% 46%; /* Darker but still vibrant violet */
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -31,7 +31,7 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 260 84% 51%; /* Violet */
+    --ring: 260 84% 41%; /* Match primary */
 
     --radius: 0.5rem;
   }
@@ -78,9 +78,9 @@
 }
 
 .car-form-bg {
-  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNDAwIj48ZGVmcz48c3R5bGU+LmNhcntmaWxsOm5vbmU7c3Ryb2tlOiM4QjVDRjY7c3Ryb2tlLXdpZHRoOjE7c3Ryb2tlLW9wYWNpdHk6MC4xO308L3N0eWxlPjwvZGVmcz48cGF0aCBjbGFzcz0iY2FyIiBkPSJNODAsMTcwIEw4MCwxNzAgTDEwMCwxNTAgTDE1MCwxNTAgTDE3MCwxNzAgTDI0MCwxNzAgTDI2MCwxNTAgTDMxMCwxNTAgTDMzMCwxNzAgTDMzMCwxOTAgTDMxMCwyMTAgTDEwMCwyMTAgTDgwLDE5MCBaIiAvPjxjaXJjbGUgY2xhc3M9ImNhciIgY3g9IjEzMCIgY3k9IjIxMCIgcj0iMjAiIC8+PGNpcmNsZSBjbGFzcz0iY2FyIiBjeD0iMjgwIiBjeT0iMjEwIiByPSIyMCIgLz48cGF0aCBjbGFzcz0iY2FyIiBkPSJNMTIwLDE3MCBMMjkwLDE3MCIgLz48L3N2Zz4=');
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNDAwIj48ZGVmcz48c3R5bGU+LmNhcntmaWxsOm5vbmU7c3Ryb2tlOiM2RDI4REI7c3Ryb2tlLXdpZHRoOjE7c3Ryb2tlLW9wYWNpdHk6MC4xO308L3N0eWxlPjwvZGVmcz48cGF0aCBjbGFzcz0iY2FyIiBkPSJNODAsMTcwIEw4MCwxNzAgTDEwMCwxNTAgTDE1MCwxNTAgTDE3MCwxNzAgTDI0MCwxNzAgTDI2MCwxNTAgTDMxMCwxNTAgTDMzMCwxNzAgTDMzMCwxOTAgTDMxMCwyMTAgTDEwMCwyMTAgTDgwLDE5MCBaIiAvPjxjaXJjbGUgY2xhc3M9ImNhciIgY3g9IjEzMCIgY3k9IjIxMCIgcj0iMjAiIC8+PGNpcmNsZSBjbGFzcz0iY2FyIiBjeD0iMjgwIiBjeT0iMjEwIiByPSIyMCIgLz48cGF0aCBjbGFzcz0iY2FyIiBkPSJNMTIwLDE3MCBMMjkwLDE3MCIgLz48L3N2Zz4=');
   background-attachment: fixed;
-  background-color: #0a0a14;
+  background-color: #05050a; /* Much darker background */
   background-size: 400px;
   position: relative;
 }
@@ -92,7 +92,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at center, rgba(139, 92, 246, 0.05) 0%, rgba(10, 10, 20, 0.9) 70%);
+  background: radial-gradient(circle at center, rgba(109, 40, 219, 0.07) 0%, rgba(5, 5, 10, 0.95) 70%); /* Darker violet */
   pointer-events: none;
   z-index: 0;
 }
@@ -110,90 +110,90 @@
   left: 0;
   right: 0;
   height: 100px;
-  background: linear-gradient(to bottom, transparent, rgba(139, 92, 246, 0.05));
+  background: linear-gradient(to bottom, transparent, rgba(109, 40, 219, 0.08)); /* Darker violet */
   z-index: 0;
 }
 
 /* Enhanced Glowing elements */
 @layer components {
   .glow-card {
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.25);
+    box-shadow: 0 0 20px rgba(109, 40, 219, 0.25); /* Darker violet */
     transition: box-shadow 0.3s ease;
-    background-color: rgba(30, 30, 46, 0.7);
+    background-color: rgba(20, 20, 35, 0.7); /* Darker background */
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(139, 92, 246, 0.2);
+    border: 1px solid rgba(109, 40, 219, 0.2); /* Darker violet */
   }
   
   .glow-card:hover {
-    box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
-    border-color: rgba(139, 92, 246, 0.4);
+    box-shadow: 0 0 30px rgba(109, 40, 219, 0.4); /* Darker violet */
+    border-color: rgba(109, 40, 219, 0.4); /* Darker violet */
   }
   
   .glow-text {
-    text-shadow: 0 0 15px rgba(139, 92, 246, 0.7);
+    text-shadow: 0 0 15px rgba(109, 40, 219, 0.7); /* Darker violet */
   }
   
   .glow-text-sm {
-    text-shadow: 0 0 8px rgba(139, 92, 246, 0.6);
+    text-shadow: 0 0 8px rgba(109, 40, 219, 0.6); /* Darker violet */
   }
   
   .glow-icon {
-    filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.7));
+    filter: drop-shadow(0 0 8px rgba(109, 40, 219, 0.7)); /* Darker violet */
   }
   
   .glow-icon-sm {
-    filter: drop-shadow(0 0 5px rgba(139, 92, 246, 0.6));
+    filter: drop-shadow(0 0 5px rgba(109, 40, 219, 0.6)); /* Darker violet */
   }
   
   .glow-button {
-    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+    box-shadow: 0 0 15px rgba(109, 40, 219, 0.4); /* Darker violet */
     transition: all 0.3s ease;
-    background: rgba(139, 92, 246, 0.8);
-    border: 1px solid rgba(157, 118, 248, 0.4);
+    background: rgba(109, 40, 219, 0.8); /* Darker violet */
+    border: 1px solid rgba(129, 60, 239, 0.4); /* Slightly lighter for border */
   }
   
   .glow-button:hover:not(:disabled) {
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
-    background: rgba(139, 92, 246, 0.9);
+    box-shadow: 0 0 20px rgba(109, 40, 219, 0.6); /* Darker violet */
+    background: rgba(109, 40, 219, 0.9); /* Darker violet */
     transform: translateY(-2px);
   }
   
   .glow-input {
-    box-shadow: 0 0 8px rgba(139, 92, 246, 0.2);
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    background-color: rgba(15, 15, 23, 0.7);
+    box-shadow: 0 0 8px rgba(109, 40, 219, 0.2); /* Darker violet */
+    border: 1px solid rgba(109, 40, 219, 0.3); /* Darker violet */
+    background-color: rgba(10, 10, 18, 0.7); /* Darker background */
     backdrop-filter: blur(4px);
     color: rgba(255, 255, 255, 0.9);
   }
   
   .glow-input:focus, .glow-input:hover {
-    box-shadow: 0 0 12px rgba(139, 92, 246, 0.4);
-    border-color: rgba(139, 92, 246, 0.6);
-    background-color: rgba(15, 15, 23, 0.8);
+    box-shadow: 0 0 12px rgba(109, 40, 219, 0.4); /* Darker violet */
+    border-color: rgba(109, 40, 219, 0.6); /* Darker violet */
+    background-color: rgba(10, 10, 18, 0.8); /* Darker background */
   }
   
   .glow-border {
-    box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
-    border: 1px solid rgba(139, 92, 246, 0.3);
+    box-shadow: 0 0 15px rgba(109, 40, 219, 0.3); /* Darker violet */
+    border: 1px solid rgba(109, 40, 219, 0.3); /* Darker violet */
   }
   
   .glow-slider [data-orientation="horizontal"] {
     height: 8px;
-    background-color: rgba(139, 92, 246, 0.2);
+    background-color: rgba(109, 40, 219, 0.2); /* Darker violet */
   }
   
   .glow-slider [data-orientation="horizontal"] [data-orientation="horizontal"] {
-    background-color: rgba(139, 92, 246, 0.8);
-    box-shadow: 0 0 12px rgba(139, 92, 246, 0.6);
+    background-color: rgba(109, 40, 219, 0.8); /* Darker violet */
+    box-shadow: 0 0 12px rgba(109, 40, 219, 0.6); /* Darker violet */
   }
   
   .glow-slider [role="slider"] {
-    background-color: #9d76f8;
-    box-shadow: 0 0 15px rgba(139, 92, 246, 0.8);
+    background-color: #7d38e5; /* Darker violet */
+    box-shadow: 0 0 15px rgba(109, 40, 219, 0.8); /* Darker violet */
     cursor: pointer;
   }
   
   .glow-spinner {
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+    box-shadow: 0 0 20px rgba(109, 40, 219, 0.6); /* Darker violet */
   }
 }
