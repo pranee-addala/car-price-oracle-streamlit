@@ -66,8 +66,8 @@ export default {
 				car: {
 					primary: '#0F172A',
 					secondary: '#1E293B',
-					accent: '#0EA5E9',
-					light: '#E0F2FE',
+					accent: '#8B5CF6', // Changed from #0EA5E9 (blue) to #8B5CF6 (violet)
+					light: '#EDE9FE', // Changed from #E0F2FE (light blue) to #EDE9FE (light violet)
 					muted: '#94A3B8'
 				}
 			},

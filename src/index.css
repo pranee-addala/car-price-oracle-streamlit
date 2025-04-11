@@ -14,16 +14,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 201 96% 32%;
+    --primary: 260 84% 51%; /* Changed from blue (201 96% 32%) to violet */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 215 32% 17%;
+    --secondary: 260 32% 25%; /* Changed to match violet theme */
     --secondary-foreground: 210 40% 98%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 199 89% 48%;
+    --accent: 260 89% 66%; /* Changed from blue to violet */
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -31,7 +31,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 201 96% 32%;
+    --ring: 260 84% 51%; /* Changed to match violet */
 
     --radius: 0.5rem;
   }
@@ -78,7 +78,7 @@
 }
 
 .car-form-bg {
-  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0icmdiKDI0MCwgMjQ5LCAyNTUpIi8+PHBhdGggZD0iTTAgMCBMNTAgNTAgTDAgMTAwIFoiIG9wYWNpdHk9IjAuMDUiIGZpbGw9IiMwRUE1RTkiLz48cGF0aCBkPSJNMTAwIDAgTDUwIDUwIEwxMDAgMTAwIFoiIG9wYWNpdHk9IjAuMDUiIGZpbGw9IiMwRUE1RTkiLz48L3N2Zz4=');
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0icmdiKDI0MCwgMjQ5LCAyNTUpIi8+PHBhdGggZD0iTTAgMCBMNTAgNTAgTDAgMTAwIFoiIG9wYWNpdHk9IjAuMDUiIGZpbGw9IiM4QjVDRjYiLz48cGF0aCBkPSJNMTAwIDAgTDUwIDUwIEwxMDAgMTAwIFoiIG9wYWNpdHk9IjAuMDUiIGZpbGw9IiM4QjVDRjYiLz48L3N2Zz4=');
   background-attachment: fixed;
   background-color: #0a101f;
 }
@@ -86,71 +86,71 @@
 /* Glowing elements */
 @layer components {
   .glow-card {
-    box-shadow: 0 0 15px rgba(14, 165, 233, 0.15);
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.15);
     transition: box-shadow 0.3s ease;
   }
   
   .glow-card:hover {
-    box-shadow: 0 0 25px rgba(14, 165, 233, 0.25);
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.25);
   }
   
   .glow-text {
-    text-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
   }
   
   .glow-text-sm {
-    text-shadow: 0 0 5px rgba(14, 165, 233, 0.5);
+    text-shadow: 0 0 5px rgba(139, 92, 246, 0.5);
   }
   
   .glow-icon {
-    filter: drop-shadow(0 0 5px rgba(14, 165, 233, 0.5));
+    filter: drop-shadow(0 0 5px rgba(139, 92, 246, 0.5));
   }
   
   .glow-icon-sm {
-    filter: drop-shadow(0 0 3px rgba(14, 165, 233, 0.5));
+    filter: drop-shadow(0 0 3px rgba(139, 92, 246, 0.5));
   }
   
   .glow-button {
-    box-shadow: 0 0 10px rgba(14, 165, 233, 0.3);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
     transition: box-shadow 0.3s ease;
   }
   
   .glow-button:hover:not(:disabled) {
-    box-shadow: 0 0 15px rgba(14, 165, 233, 0.5);
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
   }
   
   .glow-input {
-    box-shadow: 0 0 5px rgba(14, 165, 233, 0.15);
-    border: 1px solid rgba(14, 165, 233, 0.3);
+    box-shadow: 0 0 5px rgba(139, 92, 246, 0.15);
+    border: 1px solid rgba(139, 92, 246, 0.3);
     background-color: rgba(15, 23, 42, 0.7);
   }
   
   .glow-input:focus, .glow-input:hover {
-    box-shadow: 0 0 10px rgba(14, 165, 233, 0.3);
-    border-color: rgba(14, 165, 233, 0.5);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+    border-color: rgba(139, 92, 246, 0.5);
   }
   
   .glow-border {
-    box-shadow: 0 0 10px rgba(14, 165, 233, 0.2);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
   }
   
   .glow-slider [data-orientation="horizontal"] {
     height: 8px;
-    background-color: rgba(14, 165, 233, 0.1);
+    background-color: rgba(139, 92, 246, 0.1);
   }
   
   .glow-slider [data-orientation="horizontal"] [data-orientation="horizontal"] {
-    background-color: rgba(14, 165, 233, 0.7);
-    box-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
+    background-color: rgba(139, 92, 246, 0.7);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
   }
   
   .glow-slider [role="slider"] {
-    background-color: #0ea5e9;
-    box-shadow: 0 0 10px rgba(14, 165, 233, 0.7);
+    background-color: #8B5CF6;
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.7);
     cursor: pointer;
   }
   
   .glow-spinner {
-    box-shadow: 0 0 15px rgba(14, 165, 233, 0.5);
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
   }
 }
