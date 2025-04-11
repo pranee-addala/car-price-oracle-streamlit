@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import { Car } from "lucide-react";
+import { Car, Sparkles } from "lucide-react";
 
 interface CarImageProps {
   brand: string;
@@ -36,20 +36,24 @@ const CarImage = ({ brand, type, className }: CarImageProps) => {
   return (
     <div className={cn("w-full h-full flex items-center justify-center", className)}>
       {imageSrc ? (
-        <div className="relative w-full aspect-video max-w-md overflow-hidden rounded-lg shadow-md">
+        <div className="relative w-full aspect-video max-w-md overflow-hidden rounded-lg shadow-xl">
           <img 
             src={imageSrc} 
             alt={`${brand} car`} 
             className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
           />
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-            <h3 className="text-white font-bold text-lg">{brand}</h3>
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+            <div className="flex items-center gap-2">
+              <Sparkles className="h-4 w-4 text-car-accent glow-icon-sm" />
+              <h3 className="text-white font-bold text-lg glow-text-sm">{brand}</h3>
+            </div>
             <p className="text-white/90 text-sm">{type} Model</p>
           </div>
+          <div className="absolute inset-0 pointer-events-none border border-car-accent/30 rounded-lg glow-border"></div>
         </div>
       ) : (
-        <div className="flex items-center justify-center w-full aspect-video max-w-md bg-car-light/50 rounded-lg">
-          <Car className="w-16 h-16 text-car-muted opacity-30" />
+        <div className="flex items-center justify-center w-full aspect-video max-w-md bg-car-primary/50 rounded-lg border border-car-accent/30 glow-border">
+          <Car className="w-16 h-16 text-car-accent opacity-60 glow-icon" />
         </div>
       )}
     </div>
