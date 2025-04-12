@@ -122,7 +122,7 @@ const CarForm = () => {
         {/* Car Details Form (LEFT Side) - Swapped position */}
         <div className="lg:col-span-7">
           <Card className="shadow-xl bg-gradient-to-br from-car-primary to-car-secondary border border-car-accent/20 glow-card h-full">
-            <CardHeader className="bg-gradient-to-r from-car-accent to-car-accent/70 text-white rounded-t-lg">
+            <CardHeader className="bg-gradient-to-r from-car-accent via-car-accent/90 to-car-accent/70 text-white rounded-t-lg shadow-[0_0_15px_rgba(109,40,219,0.6)]">
               <CardTitle className="flex items-center gap-2">
                 <Car className="h-6 w-6 glow-icon" />
                 Car Details
@@ -414,7 +414,7 @@ const CarForm = () => {
         <div className="lg:col-span-5 flex flex-col gap-6">
           {/* Car Image Section (Top Right) */}
           <Card className="shadow-xl bg-gradient-to-br from-car-primary to-car-secondary border border-car-accent/20 glow-card">
-            <CardHeader className="bg-gradient-to-r from-car-accent to-car-accent/70 text-white rounded-t-lg">
+            <CardHeader className="bg-gradient-to-r from-car-accent via-car-accent/90 to-car-accent/70 text-white rounded-t-lg shadow-[0_0_15px_rgba(109,40,219,0.6)]">
               <CardTitle className="flex items-center gap-2">
                 <Car className="h-6 w-6 glow-icon" />
                 Car Visualization
@@ -427,7 +427,7 @@ const CarForm = () => {
 
           {/* Results Panel (Bottom Right) */}
           <Card className="shadow-xl bg-gradient-to-br from-car-primary to-car-secondary border border-car-accent/20 glow-card">
-            <CardHeader className="bg-gradient-to-r from-car-accent to-car-accent/70 text-white rounded-t-lg">
+            <CardHeader className="bg-gradient-to-r from-car-accent via-car-accent/90 to-car-accent/70 text-white rounded-t-lg shadow-[0_0_15px_rgba(109,40,219,0.6)]">
               <CardTitle className="flex items-center gap-2">
                 <IndianRupee className="h-6 w-6 glow-icon" />
                 Price Prediction
