@@ -78,11 +78,12 @@
 }
 
 .car-form-bg {
-  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNDAwIj48ZGVmcz48c3R5bGU+LmNhcntmaWxsOm5vbmU7c3Ryb2tlOiM2RDI4REI7c3Ryb2tlLXdpZHRoOjE7c3Ryb2tlLW9wYWNpdHk6MC4xO308L3N0eWxlPjwvZGVmcz48cGF0aCBjbGFzcz0iY2FyIiBkPSJNODAsMTcwIEw4MCwxNzAgTDEwMCwxNTAgTDE1MCwxNTAgTDE3MCwxNzAgTDI0MCwxNzAgTDI2MCwxNTAgTDMxMCwxNTAgTDMzMCwxNzAgTDMzMCwxOTAgTDMxMCwyMTAgTDEwMCwyMTAgTDgwLDE5MCBaIiAvPjxjaXJjbGUgY2xhc3M9ImNhciIgY3g9IjEzMCIgY3k9IjIxMCIgcj0iMjAiIC8+PGNpcmNsZSBjbGFzcz0iY2FyIiBjeD0iMjgwIiBjeT0iMjEwIiByPSIyMCIgLz48cGF0aCBjbGFzcz0iY2FyIiBkPSJNMTIwLDE3MCBMMjkwLDE3MCIgLz48L3N2Zz4=');
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNDAwIj48ZGVmcz48c3R5bGU+LmNhcntmaWxsOm5vbmU7c3Ryb2tlOiM2RDI4REI7c3Ryb2tlLXdpZHRoOjE7c3Ryb2tlLW9wYWNpdHk6MC4xO308L3N0eWxlPjwvZGVmcz48cGF0aCBjbGFzcz0iY2FyIiBkPSJNODAsMTcwIEw4MCwxNzAgTDEwMCwxNTAgTDE1MCwxNTAgTDE3MCwxNzAgTDI0MCwxNzAgTDI2MCwxNTAgTDMxMCwxNTAgTDMzMCwxNzAgTDMzMCwxOTAgTDMxMCwyMTAgTDEwMCwyMTAgTDgwLDE5MCBaIiAvPjxjaXJjbGUgY2xhc3M9ImNhciIgY3g9IjEzMCIgY3k9IjIxMCIgcj0iMjAiIC8+PGNpcmNsZSBjbGFzcz0iY2FyIiBjeD0iMjgwIiBjeT0iMjEwIiByPSIyMCIgLz48cGF0aCBjbGFzcz0iY2FyIiBkPSJNMTIwLDE3MCBMMjkwLDE3MCIgLz48L3N2Zz4='), url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48ZGVmcz48c3R5bGU+LnRpcmV7ZmlsbDpub25lO3N0cm9rZTojNkQyOERCO3N0cm9rZS13aWR0aDoxO3N0cm9rZS1vcGFjaXR5OjAuMTt9PC9zdHlsZT48L2RlZnM+PGNpcmNsZSBjbGFzcz0idGlyZSIgY3g9IjEwMCIgY3k9IjEwMCIgcj0iNTAiIC8+PGNpcmNsZSBjbGFzcz0idGlyZSIgY3g9IjEwMCIgY3k9IjEwMCIgcj0iMjAiIC8+PHBhdGggY2xhc3M9InRpcmUiIGQ9Ik0xMDAsNTAgTDEwMCw2MCIvPjxwYXRoIGNsYXNzPSJ0aXJlIiBkPSJNMTAwLDE0MCBMMTAwLDE1MCIvPjxwYXRoIGNsYXNzPSJ0aXJlIiBkPSJNNTAsMTAwIEw2MCwxMDAiLz48cGF0aCBjbGFzcz0idGlyZSIgZD0iTTE0MCwxMDAgTDE1MCwxMDAiLz48cGF0aCBjbGFzcz0idGlyZSIgZD0iTTc1LDc1IEw4NSw4NSIvPjxwYXRoIGNsYXNzPSJ0aXJlIiBkPSJNMTE1LDExNSBMMTI1LDEyNSIvPjxwYXRoIGNsYXNzPSJ0aXJlIiBkPSJNNzUsMTI1IEw4NSwxMTUiLz48cGF0aCBjbGFzcz0idGlyZSIgZD0iTTExNSw4NSBMMTI1LDc1Ii8+PC9zdmc+');
   background-attachment: fixed;
   background-color: #05050a; /* Much darker background */
-  background-size: 400px;
+  background-size: 400px, 200px;
   position: relative;
+  backdrop-filter: blur(1px);
 }
 
 .car-form-bg::before {
@@ -195,5 +196,67 @@
   
   .glow-spinner {
     box-shadow: 0 0 20px rgba(109, 40, 219, 0.6); /* Darker violet */
+  }
+
+  /* Traffic light animation */
+  .traffic-light {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 10;
+    opacity: 0.5;
+  }
+
+  .traffic-light-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    opacity: 0.3;
+  }
+
+  .traffic-light-red {
+    background-color: #ff5555;
+    animation: pulse-light 3s infinite;
+  }
+
+  .traffic-light-yellow {
+    background-color: #ffdd55;
+    animation: pulse-light 3s infinite 1s;
+  }
+
+  .traffic-light-green {
+    background-color: #55ff55;
+    animation: pulse-light 3s infinite 2s;
+  }
+
+  @keyframes pulse-light {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; box-shadow: 0 0 10px currentColor; }
+  }
+
+  /* Road markings */
+  .road-marking {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1) 30px,
+      transparent 30px,
+      transparent 60px
+    );
+    animation: road-move 10s linear infinite;
+    z-index: 0;
+  }
+
+  @keyframes road-move {
+    0% { background-position: 0 0; }
+    100% { background-position: 120px 0; }
   }
 }

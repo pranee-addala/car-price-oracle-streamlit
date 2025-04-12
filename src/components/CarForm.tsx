@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { 
   Car, 
-  DollarSign, 
+  IndianRupee, 
   Calendar, 
   Activity, 
   Gauge, 
@@ -110,73 +110,16 @@ const CarForm = () => {
 
   return (
     <div className="w-full max-w-6xl mx-auto px-4">
+      {/* Add road markings and traffic light effects */}
+      <div className="road-marking"></div>
+      <div className="traffic-light">
+        <div className="traffic-light-dot traffic-light-red"></div>
+        <div className="traffic-light-dot traffic-light-yellow"></div>
+        <div className="traffic-light-dot traffic-light-green"></div>
+      </div>
+      
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        {/* Left Column (Car Visualization + Price Prediction) */}
-        <div className="lg:col-span-5 flex flex-col gap-6">
-          {/* Car Image Section (Top Left) */}
-          <Card className="shadow-xl bg-gradient-to-br from-car-primary to-car-secondary border border-car-accent/20 glow-card">
-            <CardHeader className="bg-gradient-to-r from-car-accent to-car-accent/70 text-white rounded-t-lg">
-              <CardTitle className="flex items-center gap-2">
-                <Car className="h-6 w-6 glow-icon" />
-                Car Visualization
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-6 flex items-center justify-center h-full">
-              <CarImage brand={formData.brand} type={formData.fuel} />
-            </CardContent>
-          </Card>
-
-          {/* Results Panel (Bottom Left) */}
-          <Card className="shadow-xl bg-gradient-to-br from-car-primary to-car-secondary border border-car-accent/20 glow-card">
-            <CardHeader className="bg-gradient-to-r from-car-accent to-car-accent/70 text-white rounded-t-lg">
-              <CardTitle className="flex items-center gap-2">
-                <DollarSign className="h-6 w-6 glow-icon" />
-                Price Prediction
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="pt-6">
-              <div className="flex flex-col items-center justify-center h-full">
-                {isLoading ? (
-                  <div className="flex flex-col items-center gap-3 py-6">
-                    <div className="w-16 h-16 border-4 border-car-light border-t-car-accent rounded-full animate-spin glow-spinner" />
-                    <p className="text-car-muted">Calculating your car's value...</p>
-                  </div>
-                ) : predictedPrice ? (
-                  <div className="text-center space-y-4 py-6">
-                    <p className="text-car-muted">Estimated Price:</p>
-                    <div className="text-3xl font-bold text-car-accent glow-text">
-                      {formatCurrency(predictedPrice)}
-                    </div>
-                    <div className="border border-car-accent/30 rounded-lg p-4 bg-car-primary/40 backdrop-blur-sm mt-4">
-                      <p className="text-xs text-car-muted text-center">
-                        This price is based on machine learning predictions using similar vehicles in the market.
-                      </p>
-                    </div>
-                    <Button 
-                      variant="outline" 
-                      className="mt-4 glow-button"
-                      onClick={() => setPredictedPrice(null)}
-                    >
-                      Reset
-                    </Button>
-                  </div>
-                ) : (
-                  <div className="flex flex-col items-center gap-4 py-6 text-center">
-                    <DollarSign className="w-12 h-12 text-car-accent opacity-70 glow-icon" />
-                    <div>
-                      <h3 className="font-medium text-lg text-car-light">No Prediction Yet</h3>
-                      <p className="text-car-muted text-sm mt-1">
-                        Fill in your car details and click "Predict Price" to get an estimate.
-                      </p>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Car Details Form (Right Side) */}
+        {/* Car Details Form (LEFT Side) - Swapped position */}
         <div className="lg:col-span-7">
           <Card className="shadow-xl bg-gradient-to-br from-car-primary to-car-secondary border border-car-accent/20 glow-card h-full">
             <CardHeader className="bg-gradient-to-r from-car-accent to-car-accent/70 text-white rounded-t-lg">
@@ -452,7 +395,7 @@ const CarForm = () => {
                         <>Processing...</>
                       ) : (
                         <>
-                          <DollarSign className="mr-2 h-4 w-4" />
+                          <IndianRupee className="mr-2 h-4 w-4" />
                           Predict Price
                         </>
                       )}
@@ -464,6 +407,71 @@ const CarForm = () => {
                 </Tooltip>
               </TooltipProvider>
             </CardFooter>
+          </Card>
+        </div>
+
+        {/* Right Column (Car Visualization + Price Prediction) - Swapped position */}
+        <div className="lg:col-span-5 flex flex-col gap-6">
+          {/* Car Image Section (Top Right) */}
+          <Card className="shadow-xl bg-gradient-to-br from-car-primary to-car-secondary border border-car-accent/20 glow-card">
+            <CardHeader className="bg-gradient-to-r from-car-accent to-car-accent/70 text-white rounded-t-lg">
+              <CardTitle className="flex items-center gap-2">
+                <Car className="h-6 w-6 glow-icon" />
+                Car Visualization
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="p-6 flex items-center justify-center h-full">
+              <CarImage brand={formData.brand} type={formData.fuel} />
+            </CardContent>
+          </Card>
+
+          {/* Results Panel (Bottom Right) */}
+          <Card className="shadow-xl bg-gradient-to-br from-car-primary to-car-secondary border border-car-accent/20 glow-card">
+            <CardHeader className="bg-gradient-to-r from-car-accent to-car-accent/70 text-white rounded-t-lg">
+              <CardTitle className="flex items-center gap-2">
+                <IndianRupee className="h-6 w-6 glow-icon" />
+                Price Prediction
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="pt-6">
+              <div className="flex flex-col items-center justify-center h-full">
+                {isLoading ? (
+                  <div className="flex flex-col items-center gap-3 py-6">
+                    <div className="w-16 h-16 border-4 border-car-light border-t-car-accent rounded-full animate-spin glow-spinner" />
+                    <p className="text-car-muted">Calculating your car's value...</p>
+                  </div>
+                ) : predictedPrice ? (
+                  <div className="text-center space-y-4 py-6">
+                    <p className="text-car-muted">Estimated Price:</p>
+                    <div className="text-3xl font-bold text-car-accent glow-text">
+                      {formatCurrency(predictedPrice)}
+                    </div>
+                    <div className="border border-car-accent/30 rounded-lg p-4 bg-car-primary/40 backdrop-blur-sm mt-4">
+                      <p className="text-xs text-car-muted text-center">
+                        This price is based on machine learning predictions using similar vehicles in the market.
+                      </p>
+                    </div>
+                    <Button 
+                      variant="outline" 
+                      className="mt-4 glow-button"
+                      onClick={() => setPredictedPrice(null)}
+                    >
+                      Reset
+                    </Button>
+                  </div>
+                ) : (
+                  <div className="flex flex-col items-center gap-4 py-6 text-center">
+                    <IndianRupee className="w-12 h-12 text-car-accent opacity-70 glow-icon" />
+                    <div>
+                      <h3 className="font-medium text-lg text-car-light">No Prediction Yet</h3>
+                      <p className="text-car-muted text-sm mt-1">
+                        Fill in your car details and click "Predict Price" to get an estimate.
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </CardContent>
           </Card>
         </div>
       </div>
