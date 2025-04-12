@@ -13,21 +13,70 @@ const CarImage = ({ brand, type, className }: CarImageProps) => {
   const [imageSrc, setImageSrc] = useState<string>("");
   
   useEffect(() => {
-    // In a real app, we would fetch the actual image from an API
-    // Here we'll use some generic car images based on the type
-    
-    // This is just a placeholder implementation
-    // Each car brand would actually have its own image in a real app
+    // Get brand-specific car images
     let imageUrl = "";
     
-    if (type === "Diesel") {
-      imageUrl = "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
-    } else if (type === "Petrol") {
-      imageUrl = "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1528";
-    } else if (type === "CNG" || type === "LPG") {
-      imageUrl = "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
-    } else {
-      imageUrl = "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
+    // Match brand to specific images
+    switch(brand.toLowerCase()) {
+      case "maruti":
+        imageUrl = "https://images.unsplash.com/photo-1621771670023-55fdc94836a4?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
+        break;
+      case "honda":
+        imageUrl = "https://images.unsplash.com/photo-1617814065893-00757125efab?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
+        break;
+      case "hyundai":
+        imageUrl = "https://images.unsplash.com/photo-1629897048514-3dd7414efc45?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
+        break;
+      case "toyota":
+        imageUrl = "https://images.unsplash.com/photo-1559416523-140ddc3d238c?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
+        break;
+      case "bmw":
+        imageUrl = "https://images.unsplash.com/photo-1556189250-72ba954cfc2b?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
+        break;
+      case "audi":
+        imageUrl = "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
+        break;
+      case "mercedes-benz":
+        imageUrl = "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
+        break;
+      case "skoda":
+        imageUrl = "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
+        break;
+      case "ford":
+        imageUrl = "https://images.unsplash.com/photo-1551830820-330a71634c3d?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
+        break;
+      case "volkswagen":
+        imageUrl = "https://images.unsplash.com/photo-1582639510494-c80b5de9f148?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
+        break;
+      case "tata":
+        imageUrl = "https://images.unsplash.com/photo-1609712861205-f029838638e5?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
+        break;
+      case "mahindra":
+        imageUrl = "https://images.unsplash.com/photo-1600752891629-7320c2597dd7?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
+        break;
+      case "kia":
+        imageUrl = "https://images.unsplash.com/photo-1600959907490-3d1e77c88a9c?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
+        break;
+      case "nissan":
+        imageUrl = "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
+        break;
+      case "renault":
+        imageUrl = "https://images.unsplash.com/photo-1560009320-c01920eef9f3?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
+        break;
+      case "mg":
+        imageUrl = "https://images.unsplash.com/photo-1668148021684-63cdc3517fc0?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
+        break;
+      default:
+        // Fallback to type-based images if brand not found
+        if (type === "Diesel") {
+          imageUrl = "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
+        } else if (type === "Petrol") {
+          imageUrl = "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1528";
+        } else if (type === "CNG" || type === "LPG") {
+          imageUrl = "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
+        } else {
+          imageUrl = "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
+        }
     }
     
     setImageSrc(imageUrl);
