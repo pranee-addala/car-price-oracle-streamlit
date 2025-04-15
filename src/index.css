@@ -86,7 +86,6 @@
   backdrop-filter: blur(1px);
 }
 
-/* Add concentric circles animation to the background */
 .car-form-bg::before {
   content: "";
   position: absolute;
@@ -97,11 +96,6 @@
   background: radial-gradient(circle at center, rgba(109, 40, 219, 0.07) 0%, rgba(5, 5, 10, 0.95) 70%); /* Darker violet */
   pointer-events: none;
   z-index: 0;
-}
-
-/* Add the concentric circles elements */
-.car-form-bg {
-  overflow: hidden; /* Ensure circles don't cause scrollbars */
 }
 
 .car-form-bg > * {
@@ -223,76 +217,6 @@
     100% {
       box-shadow: 0 0 25px rgba(109, 40, 219, 0.8);
     }
-  }
-
-  /* Concentric circles animation */
-  .concentric-circle {
-    position: fixed;
-    border-radius: 50%;
-    border: 1px solid rgba(109, 40, 219, 0.2);
-    box-shadow: 0 0 15px rgba(109, 40, 219, 0.3);
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .concentric-circle-1 {
-    width: 200px;
-    height: 200px;
-    animation: pulse-circle 8s ease-in-out infinite, move-circle-1 30s ease-in-out infinite alternate;
-  }
-
-  .concentric-circle-2 {
-    width: 400px;
-    height: 400px;
-    animation: pulse-circle 12s ease-in-out infinite, move-circle-2 35s ease-in-out infinite alternate;
-  }
-
-  .concentric-circle-3 {
-    width: 600px;
-    height: 600px;
-    animation: pulse-circle 16s ease-in-out infinite, move-circle-3 40s ease-in-out infinite alternate;
-  }
-
-  .concentric-circle-4 {
-    width: 800px;
-    height: 800px;
-    animation: pulse-circle 20s ease-in-out infinite, move-circle-4 45s ease-in-out infinite alternate;
-  }
-
-  @keyframes pulse-circle {
-    0%, 100% {
-      opacity: 0.2;
-      border-width: 1px;
-    }
-    50% {
-      opacity: 0.4;
-      border-width: 2px;
-    }
-  }
-
-  @keyframes move-circle-1 {
-    0% { left: 30%; top: 30%; }
-    50% { left: 70%; top: 60%; }
-    100% { left: 40%; top: 80%; }
-  }
-
-  @keyframes move-circle-2 {
-    0% { left: 70%; top: 20%; }
-    50% { left: 40%; top: 70%; }
-    100% { left: 65%; top: 65%; }
-  }
-
-  @keyframes move-circle-3 {
-    0% { left: 40%; top: 60%; }
-    50% { left: 60%; top: 30%; }
-    100% { left: 30%; top: 50%; }
-  }
-
-  @keyframes move-circle-4 {
-    0% { left: 50%; top: 50%; }
-    50% { left: 30%; top: 40%; }
-    100% { left: 70%; top: 30%; }
   }
 
   /* Traffic light animation */
