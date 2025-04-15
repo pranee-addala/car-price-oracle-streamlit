@@ -17,67 +17,68 @@ const CarImage = ({ brand, type, className }: CarImageProps) => {
     let imageUrl = "";
     
     // Match brand to specific images
-    switch(brand.toLowerCase()) {
-      case "maruti":
-        imageUrl = "https://images.unsplash.com/photo-1621771670023-55fdc94836a4?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
-        break;
-      case "honda":
-        imageUrl = "https://images.unsplash.com/photo-1617814065893-00757125efab?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
-        break;
-      case "hyundai":
-        imageUrl = "https://images.unsplash.com/photo-1629897048514-3dd7414efc45?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
-        break;
-      case "toyota":
-        imageUrl = "https://images.unsplash.com/photo-1559416523-140ddc3d238c?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
-        break;
-      case "bmw":
-        imageUrl = "https://images.unsplash.com/photo-1556189250-72ba954cfc2b?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
-        break;
-      case "audi":
-        imageUrl = "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
-        break;
-      case "mercedes-benz":
-        imageUrl = "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
-        break;
-      case "skoda":
-        imageUrl = "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
-        break;
-      case "ford":
-        imageUrl = "https://images.unsplash.com/photo-1551830820-330a71634c3d?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
-        break;
-      case "volkswagen":
-        imageUrl = "https://images.unsplash.com/photo-1582639510494-c80b5de9f148?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
-        break;
-      case "tata":
-        imageUrl = "https://images.unsplash.com/photo-1609712861205-f029838638e5?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
-        break;
-      case "mahindra":
-        imageUrl = "https://images.unsplash.com/photo-1600752891629-7320c2597dd7?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
-        break;
-      case "kia":
-        imageUrl = "https://images.unsplash.com/photo-1600959907490-3d1e77c88a9c?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
-        break;
-      case "nissan":
-        imageUrl = "https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
-        break;
-      case "renault":
-        imageUrl = "https://images.unsplash.com/photo-1560009320-c01920eef9f3?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
-        break;
-      case "mg":
-        imageUrl = "https://images.unsplash.com/photo-1668148021684-63cdc3517fc0?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
-        break;
-      default:
-        // Fallback to type-based images if brand not found
-        if (type === "Diesel") {
-          imageUrl = "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
-        } else if (type === "Petrol") {
-          imageUrl = "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1528";
-        } else if (type === "CNG" || type === "LPG") {
-          imageUrl = "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
-        } else {
-          imageUrl = "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1470";
-        }
+  switch(brand.toLowerCase()) {
+  case "maruti":
+    imageUrl = "https://indianautosblog.com/maruti-suzuki-swift-best-selling-car-in-2020-p322083";
+    break;
+  case "honda":
+    imageUrl = "https://unsplash.com/photos/honda-car-turn0search10";
+    break;
+  case "hyundai":
+    imageUrl = "https://unsplash.com/photos/hyundai-car-turn0search10";
+    break;
+  case "toyota":
+    imageUrl = "https://unsplash.com/photos/toyota-car-turn0search5";
+    break;
+  case "bmw":
+    imageUrl = "https://unsplash.com/photos/bmw-car-turn0search10";
+    break;
+  case "audi":
+    imageUrl = "https://unsplash.com/photos/audi-car-turn0search0";
+    break;
+  case "mercedes-benz":
+    imageUrl = "https://unsplash.com/photos/mercedes-benz-car-turn0search1";
+    break;
+  case "skoda":
+    imageUrl = "https://unsplash.com/photos/skoda-car-turn0search4";
+    break;
+  case "ford":
+    imageUrl = "https://unsplash.com/photos/ford-car-turn0search10";
+    break;
+  case "volkswagen":
+    imageUrl = "https://unsplash.com/photos/volkswagen-car-turn0search2";
+    break;
+  case "tata":
+    imageUrl = "https://unsplash.com/photos/tata-car-turn0search10";
+    break;
+  case "mahindra":
+    imageUrl = "https://unsplash.com/photos/mahindra-car-turn0search7";
+    break;
+  case "kia":
+    imageUrl = "https://unsplash.com/photos/kia-car-turn0search9";
+    break;
+  case "nissan":
+    imageUrl = "https://unsplash.com/photos/nissan-car-turn0search11";
+    break;
+  case "renault":
+    imageUrl = "https://unsplash.com/photos/renault-car-turn0search3";
+    break;
+  case "mg":
+    imageUrl = "https://unsplash.com/photos/mg-car-turn0search10";
+    break;
+  default:
+    // Fallback to type-based images if brand not found
+    if (type === "Diesel") {
+      imageUrl = "https://unsplash.com/photos/diesel-car-turn0search10";
+    } else if (type === "Petrol") {
+      imageUrl = "https://unsplash.com/photos/petrol-car-turn0search10";
+    } else if (type === "CNG" || type === "LPG") {
+      imageUrl = "https://unsplash.com/photos/cng-car-turn0search10";
+    } else {
+      imageUrl = "https://unsplash.com/photos/car-turn0search10";
     }
+}
+
     
     setImageSrc(imageUrl);
   }, [brand, type]);
