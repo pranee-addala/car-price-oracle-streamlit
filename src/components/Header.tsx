@@ -8,7 +8,7 @@ interface HeaderProps {
 
 const Header = ({ className }: HeaderProps) => {
   return (
-    <header className={cn("w-full py-4 bg-gradient-to-r from-car-primary to-car-secondary text-white shadow-lg", className)}>
+    <header className={cn("w-full py-4 bg-gradient-to-r from-car-primary to-car-secondary text-white shadow-lg glowing-header", className)}>
       <div className="container flex items-center justify-center gap-3">
         <div className="relative">
           <GaugeCircle className="w-8 h-8 text-car-accent glow-icon animate-pulse" />

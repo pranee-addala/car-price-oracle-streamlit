@@ -8,6 +8,12 @@ const Index = () => {
     <div className="min-h-screen flex flex-col car-form-bg">
       <Header />
       
+      {/* Add concentric circles */}
+      <div className="concentric-circle concentric-circle-1"></div>
+      <div className="concentric-circle concentric-circle-2"></div>
+      <div className="concentric-circle concentric-circle-3"></div>
+      <div className="concentric-circle concentric-circle-4"></div>
+      
       <main className="flex-1 container py-8">
         <div className="mb-8 text-center">
           <h2 className="text-2xl font-bold text-car-accent mb-2 glow-text">Car Price Prediction</h2>
